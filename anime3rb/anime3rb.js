@@ -87,36 +87,18 @@ function extractEpisodes(html) {
     return episodes;
 }
 
-async function extractStreamUrls(html) {
+async function extractStreamUrl(html) {
     try {
         const sourceMatch = html.match(/data-source="([^"]+)"/);
         const embedUrl = sourceMatch?.[1]?.replace(/&amp;/g, '&');
-        if (!embedUrl) return [];
+        if (!embedUrl) return null;
 
         const response = await fetch(embedUrl);
-        const data = await response.text();
-
-        const qualities = ['1080p', '720p', '480p'];
-        const streams = [];
-
-        for (const quality of qualities) {
-            const regex = new RegExp(`src:\\s*'(https:\\/\\/[^']*${quality}\\.mp4[^']*)'`);
-            const match = data.match(regex);
-            if (match?.[1]) {
-                streams.push({
-                    title: quality,
-                    url: match[1],
-                    type: 'mp4',
-                    behaviorHints: {
-                        notWebReady: false
-                    }
-                });
-            }
-        }
-
-        return streams;
+        const data = await response;
+        const videoUrl = data.match(/src:\s*'(https:\/\/[^']+\.mp4[^']*)'/)?.[1];
+        console.log(videoUrl);
+        return videoUrl || null;
     } catch (error) {
-        console.error('Error extracting stream URLs:', error);
-        return [];
+        return null;
     }
 }
