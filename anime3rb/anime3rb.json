@@ -11,7 +11,7 @@
     "quality": "1080p - 720p - 360p",
     "baseUrl": "https://anime3rb.com/",
     "searchBaseUrl": "https://anime3rb.com/search?q=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/anime3rb/anime3rb.js",
+    "scriptUrl": "https://raw.githubusercontent.com/scigward/sources/refs/heads/main/anime3rb/anime3rb.js",
     "streamAsyncJS": true,
     "type": "anime"
 }
