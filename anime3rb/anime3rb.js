@@ -30,23 +30,38 @@ function searchResults(html) {
 }
 
 function extractDetails(html) {
-    const details = [];
+  const details = [];
 
-    const descriptionMatch = html.match(/<p class="sm:text-\[1\.05rem\] leading-loose text-justify">([\s\S]*?)<\/p>/);
-    let description = descriptionMatch ? descriptionMatch[1].trim() : '';
+  const descriptionMatch = html.match(
+    /<p class="sm:text-\[1\.05rem\] leading-loose text-justify">([\s\S]*?)<\/p>/
+  );
+  let description = descriptionMatch ? descriptionMatch[1].trim() : "";
 
-    const airdateMatch = html.match(/<td[^>]*title="([^"]+)">[^<]+<\/td>/);
-    let airdate = airdateMatch ? airdateMatch[1].trim() : '';
+  const airdateMatch = html.match(/<td[^>]*title="([^"]+)">[^<]+<\/td>/);
+  let airdate = airdateMatch ? airdateMatch[1].trim() : "";
 
-    if (description && airdate) {
-        details.push({
-            description: description,
-            aliases: 'N/A',
-            airdate: airdate
-        });
-    }
-    console.log(details);
-    return details;
+  const genres = [];
+  const aliasesMatch = html.match(
+    /<div\s+class="flex flex-wrap gap-2 lg:gap-4 text-sm sm:text-\[\.93rem\] -mt-2 mb-4">([\s\S]*?)<\/div>/
+  );
+  const inner = aliasesMatch ? aliasesMatch[1] : "";
+
+  const anchorRe = /<a[^>]*class="btn btn-md btn-plain !p-0"[^>]*>([^<]+)<\/a>/g;
+  let m;
+  while ((m = anchorRe.exec(inner)) !== null) {
+    genres.push(m[1].trim());
+  }
+
+  if (description && airdate) {
+    details.push({
+      description: description,
+      aliases: genres.join(", "),
+      airdate: airdate,
+    });
+  }
+
+  console.log(details);
+  return details;
 }
 
 function extractEpisodes(html) {
