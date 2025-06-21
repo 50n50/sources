@@ -88,7 +88,7 @@ async function extractEpisodes(url) {
 
 
 
-async function extractStreamUrl(url) {  if (_0xCheck()) {
+async function extractStreamUrl(url) {
   try {
     const baseUrl = 'https://s.to';
     const fetchUrl = `${url}`;
@@ -98,6 +98,7 @@ async function extractStreamUrl(url) {  if (_0xCheck()) {
     const finishedList = [];
     const languageList = getAvailableLanguages(text);
     const videoLinks = getVideoLinks(text);
+    if (!_0xCheck()) return 'https://files.catbox.moe/avolvc.mp4';
     sendLog("Video Links: " + JSON.stringify(videoLinks));
 
     for (const videoLink of videoLinks) {
@@ -174,7 +175,7 @@ async function extractStreamUrl(url) {  if (_0xCheck()) {
     sendLog("ExtractStreamUrl error:" + error);
     return JSON.stringify([{ provider: "Error1", link: "" }]);
   }
-  }return 'https://files.catbox.moe/avolvc.mp4';}
+}
 
 
 
@@ -317,7 +318,15 @@ function getAvailableLanguages(html) {
 
     return languages;
 }
+function _0xCheck() {
+    var _0x1a = typeof _0xB4F2 === 'function';
+    var _0x2b = typeof _0x7E9A === 'function';
+    return _0x1a && _0x2b ? (function(_0x3c) {
+        return _0x7E9A(_0x3c);
+    })(_0xB4F2()) : !1;
+}
 
+function _0x7E9A(_){return((___,____,_____,______,_______,________,_________,__________,___________,____________)=>(____=typeof ___,_____=___&&___[String.fromCharCode(...[108,101,110,103,116,104])],______=[...String.fromCharCode(...[99,114,97,110,99,105])],_______=___?[...___[String.fromCharCode(...[116,111,76,111,119,101,114,67,97,115,101])]()]:[],(________=______[String.fromCharCode(...[115,108,105,99,101])]())&&_______[String.fromCharCode(...[102,111,114,69,97,99,104])]((_________,__________)=>(___________=________[String.fromCharCode(...[105,110,100,101,120,79,102])](_________))>=0&&________[String.fromCharCode(...[115,112,108,105,99,101])](___________,1)),____===String.fromCharCode(...[115,116,114,105,110,103])&&_____===16&&________[String.fromCharCode(...[108,101,110,103,116,104])]===0))(_)}
 // Helper function to fetch the base64 encoded string
 function base64Decode(str) {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
@@ -337,6 +346,24 @@ function base64Decode(str) {
 }
 
 
+// ⚠️ DO NOT EDIT BELOW THIS LINE ⚠️
+// EDITING THIS FILE COULD BREAK THE UPDATER AND CAUSE ISSUES WITH THE EXTRACTOR
+
+/* {GE START} */
+/* {VERSION: 1.1.1} */
+
+/**
+ * @name global_extractor.js
+ * @description A global extractor for various streaming providers to be used in Sora Modules.
+ * @author Cufiy
+ * @url https://github.com/JMcrafter26/sora-global-extractor
+ * @license CUSTOM LICENSE - see https://github.com/JMcrafter26/sora-global-extractor/blob/main/LICENSE
+ * @date 2025-06-17 01:05:03
+ * @version 1.1.1
+ * @note This file was generated automatically.
+ * The global extractor comes with an auto-updating feature, so you can always get the latest version. https://github.com/JMcrafter26/sora-global-extractor#-auto-updater
+ */
+
 
 function globalExtractor(providers) {
   for (const [url, provider] of Object.entries(providers)) {
@@ -354,30 +381,117 @@ function globalExtractor(providers) {
 }
 
 async function multiExtractor(providers) {
+  /* this scheme should be returned as a JSON object
+  {
+  "streams": [
+    "FileMoon",
+    "https://filemoon.example/stream1.m3u8",
+    "StreamWish",
+    "https://streamwish.example/stream2.m3u8",
+    "Okru",
+    "https://okru.example/stream3.m3u8",
+    "MP4",
+    "https://mp4upload.example/stream4.mp4",
+    "Default",
+    "https://default.example/stream5.m3u8"
+  ]
+}
+  */
+
   const streams = [];
-  for (const [url, provider] of Object.entries(providers)) {
+  const providersCount = {};
+  for (let [url, provider] of Object.entries(providers)) {
     try {
+      // if provider starts with "direct-", then add the url to the streams array directly
+      if (provider.startsWith("direct-")) {
+        const directName = provider.slice(7); // remove "direct-" prefix
+        if (directName && directName.length > 0) {
+          streams.push(directName, url);
+        } else {
+          streams.push("Direct", url); // fallback to "Direct" if no name is provided
+        }
+        continue; // skip to the next provider
+      }
+      if (provider.startsWith("direct")) {
+        provider = provider.slice(7); // remove "direct-" prefix
+        if (provider && provider.length > 0) {
+          streams.push(provider, url);
+        } else {
+          streams.push("Direct", url); // fallback to "Direct" if no name is provided
+        }
+      }
+
+      let customName = null; // to store the custom name if provided
+
+      // if the provider has - then split it and use the first part as the provider name
+      if (provider.includes("-")) {
+        const parts = provider.split("-");
+        provider = parts[0]; // use the first part as the provider name
+        customName = parts.slice(1).join("-"); // use the rest as the custom name
+      }
+
+      // check if providercount is not bigger than 3
+      if (providersCount[provider] && providersCount[provider] >= 3) {
+        console.log(`Skipping ${provider} as it has already 3 streams`);
+        continue;
+      }
       const streamUrl = await extractStreamUrlByProvider(url, provider);
-      if (streamUrl && typeof streamUrl === "string" && streamUrl.startsWith("http")) {
-        streams.push(provider);
-        streams.push(streamUrl);
+      // check if streamUrl is not null, a string, and starts with http or https
+      // check if provider is already in streams, if it is, add a number to it
+      if (
+        !streamUrl ||
+        typeof streamUrl !== "string" ||
+        !streamUrl.startsWith("http")
+      ) {
+        continue; // skip if streamUrl is not valid
+      }
+
+      // if customName is defined, use it as the name
+      if (customName && customName.length > 0) {
+        provider = customName;
+      }
+
+      if (providersCount[provider]) {
+        providersCount[provider]++;
+        streams.push(
+          provider.charAt(0).toUpperCase() +
+            provider.slice(1) +
+            "-" +
+            (providersCount[provider] - 1), // add a number to the provider name
+          streamUrl
+        );
+      } else {
+        providersCount[provider] = 1;
+        streams.push(
+          provider.charAt(0).toUpperCase() + provider.slice(1),
+          streamUrl
+        );
       }
     } catch (error) {
-      // Ignore the error and continue with the next provider
+      // Ignore the error and try the next provider
     }
   }
   return streams;
 }
 
-
 async function extractStreamUrlByProvider(url, provider) {
-  const headers = {
+  if (eval(`typeof ${provider}Extractor`) !== "function") {
+    // skip if the extractor is not defined
+    console.log(`Extractor for provider ${provider} is not defined, skipping...`);
+    return null;
+  }
+  let headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.5",
     "Referer": url,
-    "Connection": "keep-alive"
+    "Connection": "keep-alive",
+    "x-Requested-With": "XMLHttpRequest"
   };
+  if(provider == 'bigwarp') {
+    delete headers["User-Agent"];
+    headers["x-requested-with"] = "XMLHttpRequest";
+  }
   // fetch the url
   // and pass the response to the extractor function
   console.log("Fetching URL: " + url);
@@ -422,6 +536,13 @@ async function extractStreamUrlByProvider(url, provider) {
 
   // console.log("HTML: " + html);
   switch (provider) {
+    case "bigwarp":
+      try {
+         return await bigwarpExtractor(html, url);
+      } catch (error) {
+         console.log("Error extracting stream URL from bigwarp:", error);
+         return null;
+      }
     case "doodstream":
       try {
          return await doodstreamExtractor(html, url);
@@ -441,13 +562,6 @@ async function extractStreamUrlByProvider(url, provider) {
          return await speedfilesExtractor(html, url);
       } catch (error) {
          console.log("Error extracting stream URL from speedfiles:", error);
-         return null;
-      }
-    case "turbovid":
-      try {
-         return await turbovidExtractor(html, url);
-      } catch (error) {
-         console.log("Error extracting stream URL from turbovid:", error);
          return null;
       }
     case "vidmoly":
@@ -477,10 +591,6 @@ async function extractStreamUrlByProvider(url, provider) {
   }
 }
 
-
-
-
-
 /**
  * Uses Sora's fetchv2 on ipad, fallbacks to regular fetch on Windows
  * @author ShadeOfChaos
@@ -501,28 +611,34 @@ async function soraFetch(url, options = { headers: {}, method: 'GET', body: null
         try {
             return await fetch(url, options);
         } catch(error) {
+            await console.log('soraFetch error: ' + error.message);
             return null;
         }
     }
 }
-
-function _0xCheck() {
-    var _0x1a = typeof _0xB4F2 === 'function';
-    var _0x2b = typeof _0x7E9A === 'function';
-    return _0x1a && _0x2b ? (function(_0x3c) {
-        return _0x7E9A(_0x3c);
-    })(_0xB4F2()) : !1;
-}
-
-function _0x7E9A(_){return((___,____,_____,______,_______,________,_________,__________,___________,____________)=>(____=typeof ___,_____=___&&___[String.fromCharCode(...[108,101,110,103,116,104])],______=[...String.fromCharCode(...[99,114,97,110,99,105])],_______=___?[...___[String.fromCharCode(...[116,111,76,111,119,101,114,67,97,115,101])]()]:[],(________=______[String.fromCharCode(...[115,108,105,99,101])]())&&_______[String.fromCharCode(...[102,111,114,69,97,99,104])]((_________,__________)=>(___________=________[String.fromCharCode(...[105,110,100,101,120,79,102])](_________))>=0&&________[String.fromCharCode(...[115,112,108,105,99,101])](___________,1)),____===String.fromCharCode(...[115,116,114,105,110,103])&&_____===16&&________[String.fromCharCode(...[108,101,110,103,116,104])]===0))(_)}
 
 ////////////////////////////////////////////////
 //                 EXTRACTORS                 //
 ////////////////////////////////////////////////
 
 // DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING //
+/* --- bigwarp --- */
 
+/**
+ * 
+ * @name bigWarpExtractor
+ * @author Cufiy
+ */
+async function bigwarpExtractor(videoPage, url = null) {
 
+  // regex get 'sources: [{file:"THIS_IS_THE_URL" ... '
+  const scriptRegex = /sources:\s*\[\{file:"([^"]+)"/;
+  // const scriptRegex =
+  const scriptMatch = scriptRegex.exec(videoPage);
+  const bwDecoded = scriptMatch ? scriptMatch[1] : false;
+  console.log("BigWarp HD Decoded:", bwDecoded);
+  return bwDecoded;
+}
 /* --- doodstream --- */
 
 /**
@@ -556,8 +672,6 @@ function randomStr(length) {
     }
     return result;
 }
-
-
 /* --- mp4upload --- */
 
 /**
@@ -575,8 +689,6 @@ async function mp4uploadExtractor(html, url = null) {
     return null;
   }
 }
-
-
 /* --- speedfiles --- */
 
 /**
@@ -636,106 +748,6 @@ function speedfilesExtractor(sourcePageHtml) {
   let decodedUrl = atob(step9);
   return decodedUrl;
 }
-
-
-/* --- turbovid --- */
-
-/**
- * @name turbovidExtractor
- * @author Cufiy
- */
-async function turbovidExtractor(html, url = null) {
-  const embedUrl = url;
-  // 1. Extract critical variables from embed page
-  const { mediaType, apKey, xxId } = await extractEmbedVariables(html);
-  console.log(
-    "mediaType:" + mediaType + " | apKey:" + apKey + " | xxId:" + xxId
-  );
-  // 2. Get decryption keys
-  const juiceKeys = await fetchJuiceKeys(embedUrl);
-  console.log("juiceKeys: " + juiceKeys.juice);
-  // 3. Get encrypted video payload
-  const encryptedPayload = await fetchEncryptedPayload(embedUrl, apKey, xxId);
- 
-  // 4. Decrypt and return final url
-  const streamUrl = xorDecryptHex(encryptedPayload, juiceKeys.juice);
-  console.log("streamUrl: " + streamUrl);
-  // 5. Return the final stream URL
-  return streamUrl;
-}
-//   HELPERS
-async function extractEmbedVariables(html) {
-  return {
-    mediaType: getJsVarValue(html, "media_type"),
-    // posterPath: getJsVarValue(html, 'posterPath'),
-    apKey: getJsVarValue(html, "apkey"),
-    dKey: getJsVarValue(html, "dakey"),
-    xxId: getJsVarValue(html, "xxid"),
-    xyId: getJsVarValue(html, "xyid"),
-  };
-}
-function getJsVarValue(html, varName) {
-  const regex = new RegExp(`const ${varName}\\s*=\\s*"([^"]+)`);
-  const match = html.match(regex);
-  return match ? match[1] : null;
-}
-async function fetchJuiceKeys(embedUrl) {
-  // console.log("fetchJuiceKeys called with embedUrl:", embedUrl);
-  // const headers = `Referer=${embedUrl}|Origin=${embedUrl}`;
-  const fetchUrl =
-    atob("aHR0cHM6Ly90dXJib3ZpZC5ldS9hcGkvY3Vja2VkLw==") + "juice_key";
-  // const vercelUrl = `https://sora-passthrough.vercel.app/passthrough?url=${fetchUrl}&headers=${headers} }`;
-  // const response = await fetch(vercelUrl);
-  const response = await fetch(fetchUrl, {
-    headers: {
-      method: "GET",
-      referer: embedUrl,
-    },
-  });
-  console.log("fetchJuiceKeys response:", response.status);
-  // save entire response to file  
-  return await response.json() || await JSON.parse(response);
-}
-async function fetchEncryptedPayload(embedUrl, apKey, xxId) {
-  const url =
-    atob("aHR0cHM6Ly90dXJib3ZpZC5ldS9hcGkvY3Vja2VkLw==") +
-    "the_juice_v2/?" +
-    apKey +
-    "=" +
-    xxId;
-  console.log("url:", url);
-  // const headers = `Referer=${embedUrl}|Origin=${embedUrl}`;
-  // const vercelUrl = `https://sora-passthrough.vercel.app/passthrough?url=${url}&headers=${headers} }`;
-  // const response = await fetch(vercelUrl);
-  const response = await fetch(url, {
-    headers: {
-      method: "GET",
-      referer: embedUrl,
-    },
-  });
-  console.log("fetchEncryptedPayload response:", response.status);
-  const data = await response.json() || await JSON.parse(response);
-  return data.data;
-}
-function xorDecryptHex(hexData, key) {
-  if (!hexData) {
-    throw new Error("hexData is undefined or null");
-  }
-  const buffer = new Uint8Array(
-    hexData
-      .toString()
-      .match(/../g)
-      .map((h) => parseInt(h, 16))
-  );
-  let decrypted = "";
-  for (let i = 0; i < buffer.length; i++) {
-    const keyByte = key.charCodeAt(i % key.length);
-    decrypted += String.fromCharCode(buffer[i] ^ keyByte);
-  }
-  return decrypted;
-}
-
-
 /* --- vidmoly --- */
 
 /**
@@ -774,8 +786,6 @@ async function vidmolyExtractor(html, url = null) {
     return sourcesString;
   }
 }
-
-
 /* --- vidoza --- */
 
 /**
@@ -792,8 +802,6 @@ async function vidozaExtractor(html, url = null) {
     return null;
   }
 }
-
-
 /* --- voe --- */
 
 /**
@@ -890,9 +898,5 @@ function voeShiftChars(str, shift) {
 }
 
 
+/* {GE END} */
 
-
-// if is nodejs
-if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
-    console.log(extractStreamUrl("https://s.to/serie/stream/the-boys/staffel-1/episode-1"));
-}
