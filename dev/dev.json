@@ -1,17 +1,17 @@
 {
-    "sourceName": "Development",
-    "iconUrl": "https://cdn-icons-png.flaticon.com/512/3953/3953226.png",
-    "author": {
-        "name": "Dev",
-        "icon": "https://cdn-icons-png.flaticon.com/512/3953/3953226.png"
-    },
-    "version": "1.0.1",
-    "language": "Dev",
-    "streamType": "Dev",
-    "quality": "Dev",
-    "baseUrl": "https://google.com/",
-    "searchBaseUrl": "https://google.com/?q=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/dev/dev.sora",
-    "asyncJS": true,
-    "type": "anime"
+  "sourceName": "Development",
+  "iconUrl": "https://cdn-icons-png.flaticon.com/512/3953/3953226.png",
+  "author": {
+    "name": "Dev",
+    "icon": "https://cdn-icons-png.flaticon.com/512/3953/3953226.png"
+  },
+  "version": "1.0.1",
+  "language": "Dev",
+  "streamType": "Dev",
+  "quality": "Dev",
+  "baseUrl": "https://google.com/",
+  "searchBaseUrl": "https://google.com/?q=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/dev/dev.js",
+  "asyncJS": true,
+  "type": "anime"
 }

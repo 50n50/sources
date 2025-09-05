@@ -1,20 +1,20 @@
 {
-    "sourceName": "Filmpalast",
-    "iconUrl": "https://api.jm26.net/sora-modules/filmpalast/filmpalast.ico",
-    "author": {
-        "name": "Cufiy",
-        "icon": "https://cdn.discordapp.com/avatars/606801871189049344/d5aba1f20de41a14540e66f357d0707b.webp",
-        "url": "https://github.com/JMcrafter26"
-    },
-    "version": "1.1.4",
-    "language": "German (DUB)",
-    "streamType": "HLS",
-    "quality": "720p",
-    "baseUrl": "https://filmpalast.to",
-    "searchBaseUrl": "https://filmpalast.to/search/title/%s",
-    "scriptUrl": "https://api.jm26.net/sora-modules/filmpalast/filmpalast.sora",
-    "asyncJS": true,
-    "encrypted":true,
-    "streamAsyncJS": false,
-    "type": "movies/shows"
+  "sourceName": "Filmpalast",
+  "iconUrl": "https://api.jm26.net/sora-modules/filmpalast/filmpalast.ico",
+  "author": {
+    "name": "Cufiy",
+    "icon": "https://cdn.discordapp.com/avatars/606801871189049344/d5aba1f20de41a14540e66f357d0707b.webp",
+    "url": "https://github.com/JMcrafter26"
+  },
+  "version": "1.1.4",
+  "language": "German (DUB)",
+  "streamType": "HLS",
+  "quality": "720p",
+  "baseUrl": "https://filmpalast.to",
+  "searchBaseUrl": "https://filmpalast.to/search/title/%s",
+  "scriptUrl": "https://api.jm26.net/sora-modules/filmpalast/filmpalast.js",
+  "asyncJS": true,
+  "encrypted": false,
+  "streamAsyncJS": false,
+  "type": "movies/shows"
 }

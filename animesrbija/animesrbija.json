@@ -1,18 +1,18 @@
 {
-    "sourceName": "AnimeSRBIJA",
-    "iconUrl": "https://emojigraph.org/media/joypixels/flag-serbia_1f1f7-1f1f8.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.2",
-    "language": "Serbian",
-    "streamType": "m3u8",
-    "quality": "720p",
-    "baseUrl": "https://www.animesrbija.com/",
-    "searchBaseUrl": "https://www.animesrbija.com/filter?search=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/animesrbija/animesrbija.sora",
-    "asyncJS": true,
-    "encrypted":true,
-    "type": "anime"
+  "sourceName": "AnimeSRBIJA",
+  "iconUrl": "https://emojigraph.org/media/joypixels/flag-serbia_1f1f7-1f1f8.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.2",
+  "language": "Serbian",
+  "streamType": "m3u8",
+  "quality": "720p",
+  "baseUrl": "https://www.animesrbija.com/",
+  "searchBaseUrl": "https://www.animesrbija.com/filter?search=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/animesrbija/animesrbija.js",
+  "asyncJS": true,
+  "encrypted": false,
+  "type": "anime"
 }

@@ -1,21 +1,21 @@
 {
-    "sourceName": "111477",
-    "iconUrl": "https://media.tenor.com/tIOhF5a8McEAAAAe/heart-emoji-love-nonchalant.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Multi Language",
-    "streamType": "MKV",
-    "quality": "1080p",
-    "baseUrl": "https://a.111477.xyz/",
-    "searchBaseUrl": "https://a.111477.xyz/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/111477/111477.sora",
-    "type": "shows/movies",
-    "asyncJS": true,
-    "softsub": true,
-    "downloadSupport": true,
-    "encrypted":true,
-    "note": "USE AN EXTERNAL PLAYER (E.G., VLC/MPV)"
+  "sourceName": "111477",
+  "iconUrl": "https://media.tenor.com/tIOhF5a8McEAAAAe/heart-emoji-love-nonchalant.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Multi Language",
+  "streamType": "MKV",
+  "quality": "1080p",
+  "baseUrl": "https://a.111477.xyz/",
+  "searchBaseUrl": "https://a.111477.xyz/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/111477/111477.js",
+  "type": "shows/movies",
+  "asyncJS": true,
+  "softsub": true,
+  "downloadSupport": true,
+  "encrypted": false,
+  "note": "USE AN EXTERNAL PLAYER (E.G., VLC/MPV)"
 }

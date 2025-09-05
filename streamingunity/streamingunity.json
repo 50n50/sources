@@ -1,18 +1,18 @@
 {
-    "sourceName": "StreamingUnity",
-    "iconUrl": "https://virginiapertutte.it/templates/sub-ita/images/logo.png",
-    "author": {
-        "name": "sobet",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQPQ1qIiALbM3xDWGsuJzu6ItaQGwb9ICRRw&s"
-    },
-    "version": "9000000.0.1",
-    "language": "Italian",
-    "streamType": "HLS",
-    "encrypted":true,
-    "quality": "1080p",
-    "baseUrl": "https://streamingunity.bio/it",
-    "searchBaseUrl": "https://streamingunity.bio/it/archive?title=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/streamingunity/streamingunity.sora",
-    "asyncJS": true,
-    "type": "shows/movies"
+  "sourceName": "StreamingUnity",
+  "iconUrl": "https://virginiapertutte.it/templates/sub-ita/images/logo.png",
+  "author": {
+    "name": "sobet",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQPQ1qIiALbM3xDWGsuJzu6ItaQGwb9ICRRw&s"
+  },
+  "version": "9000000.0.1",
+  "language": "Italian",
+  "streamType": "HLS",
+  "encrypted": false,
+  "quality": "1080p",
+  "baseUrl": "https://streamingunity.bio/it",
+  "searchBaseUrl": "https://streamingunity.bio/it/archive?title=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/streamingunity/streamingunity.js",
+  "asyncJS": true,
+  "type": "shows/movies"
 }

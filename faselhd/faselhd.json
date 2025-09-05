@@ -1,19 +1,19 @@
 {
-    "sourceName": "FaselHD",
-    "iconUrl": "https://www.faselhds.xyz/wp-content/themes/faselhd_2020/images/favicon.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Arabic",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://www.faselhds.xyz/",
-    "encrypted":true,
-    "searchBaseUrl": "https://www.faselhds.xyz/?s=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/faselhd/faselhd.sora",
-    "type": "shows/movies/anime",
-    "asyncJS": true,
-    "downloadSupport": true
+  "sourceName": "FaselHD",
+  "iconUrl": "https://www.faselhds.xyz/wp-content/themes/faselhd_2020/images/favicon.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Arabic",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://www.faselhds.xyz/",
+  "encrypted": false,
+  "searchBaseUrl": "https://www.faselhds.xyz/?s=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/faselhd/faselhd.js",
+  "type": "shows/movies/anime",
+  "asyncJS": true,
+  "downloadSupport": true
 }

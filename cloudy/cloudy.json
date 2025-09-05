@@ -1,20 +1,20 @@
 {
-    "sourceName": "Cloudy",
-    "iconUrl": "https://cloudy.pk/wp-content/uploads/2018/02/cloudy.pk-icon-200x200.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Hindi (DUB/SUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://cloudy.pk/",
-    "searchBaseUrl": "https://cloudy.pk/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/cloudy/cloudy.sora",
-    "type": "shows/movies",
-    "encrypted":true,
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "Cloudy",
+  "iconUrl": "https://cloudy.pk/wp-content/uploads/2018/02/cloudy.pk-icon-200x200.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Hindi (DUB/SUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://cloudy.pk/",
+  "searchBaseUrl": "https://cloudy.pk/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/cloudy/cloudy.js",
+  "type": "shows/movies",
+  "encrypted": false,
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

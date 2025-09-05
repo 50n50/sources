@@ -1,20 +1,20 @@
 {
-    "sourceName": "CKSub",
-    "iconUrl": "https://cksub.org/wp-content/uploads/2024/12/cropped-i-am-the-fated-villain-gu-changge-192x192.jpg",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Chinese",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://cksub.org/",
-    "searchBaseUrl": "https://cksub.org/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/cksub/cksub.sora",
-    "type": "anime",
-    "encrypted":true,
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "CKSub",
+  "iconUrl": "https://cksub.org/wp-content/uploads/2024/12/cropped-i-am-the-fated-villain-gu-changge-192x192.jpg",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Chinese",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://cksub.org/",
+  "searchBaseUrl": "https://cksub.org/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/cksub/cksub.js",
+  "type": "anime",
+  "encrypted": false,
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

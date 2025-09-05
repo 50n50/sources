@@ -1,20 +1,20 @@
 {
-    "sourceName": "1TamilCrow",
-    "iconUrl": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.1tamilcrow.net/wp-content/uploads/2020/09/Tamil-Crow-e1600735514979.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Tamil",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://www.1tamilcrow.net/",
-    "searchBaseUrl": "https://www.1tamilcrow.net/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/1tamilcrow/1tamilcrow.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "softsub": false,
-    "encrypted":true,
-    "downloadSupport": false
+  "sourceName": "1TamilCrow",
+  "iconUrl": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.1tamilcrow.net/wp-content/uploads/2020/09/Tamil-Crow-e1600735514979.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Tamil",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://www.1tamilcrow.net/",
+  "searchBaseUrl": "https://www.1tamilcrow.net/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/1tamilcrow/1tamilcrow.js",
+  "type": "anime",
+  "asyncJS": true,
+  "softsub": false,
+  "encrypted": false,
+  "downloadSupport": false
 }

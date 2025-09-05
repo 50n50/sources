@@ -1,19 +1,19 @@
 {
-    "sourceName": "Iyinghua",
-    "iconUrl": "https://files.catbox.moe/mh7uxf.ico",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Chinese",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "hhttp://www.iyinghua.com/",
-    "searchBaseUrl": "http://www.iyinghua.com/%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/iyinghua/iyinghua.sora",
-    "asyncJS": true,
-    "encrypted":true,
-    "type": "anime",
-    "note": "SOME STUFF IS REGION LOCKED"
+  "sourceName": "Iyinghua",
+  "iconUrl": "https://files.catbox.moe/mh7uxf.ico",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Chinese",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "hhttp://www.iyinghua.com/",
+  "searchBaseUrl": "http://www.iyinghua.com/%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/iyinghua/iyinghua.js",
+  "asyncJS": true,
+  "encrypted": false,
+  "type": "anime",
+  "note": "SOME STUFF IS REGION LOCKED"
 }

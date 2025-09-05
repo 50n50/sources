@@ -1,18 +1,18 @@
 {
-    "sourceName": "AnimeNoSub",
-    "iconUrl": "https://i3.wp.com/animenosub.to/wp-content/uploads/2024/04/cropped-favicon-192x192.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.5",
-    "language": "English (SUB/DUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://vidmoly.to/",
-    "searchBaseUrl": "https://animenosub.to/?s=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/animenosub/animenosub.sora",
-    "asyncJS": true,
-    "encrypted":true,
-    "type": "anime"
+  "sourceName": "AnimeNoSub",
+  "iconUrl": "https://i3.wp.com/animenosub.to/wp-content/uploads/2024/04/cropped-favicon-192x192.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.5",
+  "language": "English (SUB/DUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://vidmoly.to/",
+  "searchBaseUrl": "https://animenosub.to/?s=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/animenosub/animenosub.js",
+  "asyncJS": true,
+  "encrypted": false,
+  "type": "anime"
 }

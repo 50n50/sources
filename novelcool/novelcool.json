@@ -1,19 +1,19 @@
 {
-    "sourceName": "NovelCool",
-    "iconUrl": "https://www.novelcool.com/files/img/144.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "English",
-    "encrypted":true,
-    "streamType": "novels",
-    "quality": "N/A",
-    "baseUrl": "https://www.novelcool.com/",
-    "searchBaseUrl": "https://www.novelcool.com/search/?wd=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/novelcool/novelcool.sora",
-    "type": "novels",
-    "asyncJS": true,
-    "novel": true
+  "sourceName": "NovelCool",
+  "iconUrl": "https://www.novelcool.com/files/img/144.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "English",
+  "encrypted": false,
+  "streamType": "novels",
+  "quality": "N/A",
+  "baseUrl": "https://www.novelcool.com/",
+  "searchBaseUrl": "https://www.novelcool.com/search/?wd=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/novelcool/novelcool.js",
+  "type": "novels",
+  "asyncJS": true,
+  "novel": true
 }

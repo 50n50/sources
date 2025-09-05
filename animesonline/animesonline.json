@@ -1,20 +1,20 @@
 {
-    "sourceName": "AnimesOnline",
-    "iconUrl": "https://animesonline.cloud/wp-content/uploads/2025/06/Icone.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Portuguese",
-    "streamType": "mp4",
-    "quality": "1080p",
-    "baseUrl": "https://animesonline.cloud",
-    "searchBaseUrl": "https://animesonline.cloud",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/animesonline/animesonline.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "softsub": false,
-    "encrypted":true,
-    "downloadSupport": true
+  "sourceName": "AnimesOnline",
+  "iconUrl": "https://animesonline.cloud/wp-content/uploads/2025/06/Icone.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Portuguese",
+  "streamType": "mp4",
+  "quality": "1080p",
+  "baseUrl": "https://animesonline.cloud",
+  "searchBaseUrl": "https://animesonline.cloud",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/animesonline/animesonline.js",
+  "type": "anime",
+  "asyncJS": true,
+  "softsub": false,
+  "encrypted": false,
+  "downloadSupport": true
 }

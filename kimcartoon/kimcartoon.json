@@ -1,18 +1,18 @@
 {
-    "sourceName": "KimCartoon",
-    "iconUrl": "https://i2.wp.com/kimcartoon.com.co/wp-content/uploads/2023/03/favicon.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "English (DUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "encrypted":true,
-    "baseUrl": "https://vidmoly.to/",
-    "searchBaseUrl": "https://kimcartoon.com.co/?s=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/kimcartoon/kimcartoon.sora",
-    "asyncJS": true,
-    "type": "anime/shows/movies"
+  "sourceName": "KimCartoon",
+  "iconUrl": "https://i2.wp.com/kimcartoon.com.co/wp-content/uploads/2023/03/favicon.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "English (DUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "encrypted": false,
+  "baseUrl": "https://vidmoly.to/",
+  "searchBaseUrl": "https://kimcartoon.com.co/?s=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/kimcartoon/kimcartoon.js",
+  "asyncJS": true,
+  "type": "anime/shows/movies"
 }

@@ -1,20 +1,20 @@
 {
-    "sourceName": "VegaMovies",
-    "iconUrl": "https://www.arcgis.com/sharing/rest/content/items/e6b7ab2c49de42e0b4aa9ea75198737c/info/thumbnail/ago_downloaded.jpg?w=800",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.3",
-    "language": "Hindi (DUB/SUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "encrypted":true,
-    "baseUrl": "https://vegamovies10.com/",
-    "searchBaseUrl": "https://vegamovies10.com/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/vegamovies/vegamovies.sora",
-    "type": "shows/movies",
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "VegaMovies",
+  "iconUrl": "https://www.arcgis.com/sharing/rest/content/items/e6b7ab2c49de42e0b4aa9ea75198737c/info/thumbnail/ago_downloaded.jpg?w=800",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.3",
+  "language": "Hindi (DUB/SUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "encrypted": false,
+  "baseUrl": "https://vegamovies10.com/",
+  "searchBaseUrl": "https://vegamovies10.com/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/vegamovies/vegamovies.js",
+  "type": "shows/movies",
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

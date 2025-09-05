@@ -1,19 +1,19 @@
 {
-    "sourceName": "AnimeHeaven",
-    "iconUrl": "https://animeheaven.me/ah_logo.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.6",
-    "language": "English (SUB)",
-    "streamType": "HLS",
-    "quality": "720p",
-    "baseUrl": "https://animeheaven.me/",
-    "searchBaseUrl": "https://animeheaven.me/search.php?s=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/animeheaven/animeheaven.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "encrypted":true,
-    "note": "Website was recently hit by a DMCA, so not everything might work right away, please give them time to reupload anime!"
+  "sourceName": "AnimeHeaven",
+  "iconUrl": "https://animeheaven.me/ah_logo.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.6",
+  "language": "English (SUB)",
+  "streamType": "HLS",
+  "quality": "720p",
+  "baseUrl": "https://animeheaven.me/",
+  "searchBaseUrl": "https://animeheaven.me/search.php?s=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/animeheaven/animeheaven.js",
+  "type": "anime",
+  "asyncJS": true,
+  "encrypted": false,
+  "note": "Website was recently hit by a DMCA, so not everything might work right away, please give them time to reupload anime!"
 }

@@ -1,20 +1,20 @@
 {
-    "sourceName": "HelioScan",
-    "iconUrl": "https://wsrv.nl/?url=image.meowing.org/uploads/_9FxZ8P7Tik&w=44",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.2",
-    "language": "English",
-    "streamType": "novels",
-    "quality": "N/A",
-    "baseUrl": "https://helioscans.com/",
-    "searchBaseUrl": "https://helioscans.com/%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/helioscans/helioscans.sora",
-    "type": "novels",
-    "asyncJS": true,
-    "encrypted":true,
-    "novel": true,
-    "downloadSupport": false
+  "sourceName": "HelioScan",
+  "iconUrl": "https://wsrv.nl/?url=image.meowing.org/uploads/_9FxZ8P7Tik&w=44",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.2",
+  "language": "English",
+  "streamType": "novels",
+  "quality": "N/A",
+  "baseUrl": "https://helioscans.com/",
+  "searchBaseUrl": "https://helioscans.com/%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/helioscans/helioscans.js",
+  "type": "novels",
+  "asyncJS": true,
+  "encrypted": false,
+  "novel": true,
+  "downloadSupport": false
 }

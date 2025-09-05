@@ -1,20 +1,20 @@
 {
-    "sourceName": "SHahidd4u",
-    "iconUrl": "https://files.catbox.moe/njj6oe.webp",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.0",
-    "language": "Arabic",
-    "streamType": "HLS",
-    "encrypted":true,
-    "quality": "1080p",
-    "baseUrl": "https://shahidd4u.net/",
-    "searchBaseUrl": "https://shahidd4u.net/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/shahidd4u/shahidd4u.sora",
-    "type": "movies/shows",
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "SHahidd4u",
+  "iconUrl": "https://files.catbox.moe/njj6oe.webp",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.0",
+  "language": "Arabic",
+  "streamType": "HLS",
+  "encrypted": false,
+  "quality": "1080p",
+  "baseUrl": "https://shahidd4u.net/",
+  "searchBaseUrl": "https://shahidd4u.net/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/shahidd4u/shahidd4u.js",
+  "type": "movies/shows",
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

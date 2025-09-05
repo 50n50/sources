@@ -1,20 +1,20 @@
 {
-    "sourceName": "WatchAnimeWorld",
-    "iconUrl": "https://watchanimeworld.in/wp-content/uploads/cropped-AW_Smiley-192x192.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Indian",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "encrypted":true,
-    "baseUrl": "https://watchanimeworld.in/",
-    "searchBaseUrl": "https://watchanimeworld.in/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/watchanimeworld/watchanimeworld.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "WatchAnimeWorld",
+  "iconUrl": "https://watchanimeworld.in/wp-content/uploads/cropped-AW_Smiley-192x192.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Indian",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "encrypted": false,
+  "baseUrl": "https://watchanimeworld.in/",
+  "searchBaseUrl": "https://watchanimeworld.in/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/watchanimeworld/watchanimeworld.js",
+  "type": "anime",
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

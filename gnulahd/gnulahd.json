@@ -1,20 +1,20 @@
 {
-    "sourceName": "GnulaHD",
-    "iconUrl": "https://i3.wp.com/ww3.gnulahd.nu/wp-content/uploads/2025/07/cropped-faviconhd3-192x192.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Spanish (DUB/SUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://ww3.gnulahd.nu/",
-    "searchBaseUrl": "https://ww3.gnulahd.nu/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/gnulahd/gnulahd.sora",
-    "type": "anime/shows/movies",
-    "asyncJS": true,
-    "encrypted":true,
-    "softsub": true,
-    "downloadSupport": false
+  "sourceName": "GnulaHD",
+  "iconUrl": "https://i3.wp.com/ww3.gnulahd.nu/wp-content/uploads/2025/07/cropped-faviconhd3-192x192.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Spanish (DUB/SUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://ww3.gnulahd.nu/",
+  "searchBaseUrl": "https://ww3.gnulahd.nu/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/gnulahd/gnulahd.js",
+  "type": "anime/shows/movies",
+  "asyncJS": true,
+  "encrypted": false,
+  "softsub": true,
+  "downloadSupport": false
 }

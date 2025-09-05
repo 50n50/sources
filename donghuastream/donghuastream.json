@@ -1,20 +1,20 @@
 {
-    "sourceName": "DonghuaStream",
-    "iconUrl": "https://donghuastream.org/wp-content/uploads/2023/05/cropped-Donghua-Stream-scaled-1-192x192.jpeg",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Chinese",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://donghuastream.org/",
-    "searchBaseUrl": "https://donghuastream.org/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/donghuastream/donghuastream.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "encrypted":true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "DonghuaStream",
+  "iconUrl": "https://donghuastream.org/wp-content/uploads/2023/05/cropped-Donghua-Stream-scaled-1-192x192.jpeg",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Chinese",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://donghuastream.org/",
+  "searchBaseUrl": "https://donghuastream.org/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/donghuastream/donghuastream.js",
+  "type": "anime",
+  "asyncJS": true,
+  "encrypted": false,
+  "softsub": false,
+  "downloadSupport": false
 }

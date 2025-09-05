@@ -1,20 +1,20 @@
 {
-    "sourceName": "VidEasy",
-    "iconUrl": "https://www.videasy.net/logo.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "English",
-    "streamType": "HLS",
-    "encrypted":true,
-    "quality": "4K - 1080p - 720p",
-    "baseUrl": "https://player.videasy.net/",
-    "searchBaseUrl": "https://player.videasy.net/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/videasy/videasy.sora",
-    "type": "shows/movies",
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": true
+  "sourceName": "VidEasy",
+  "iconUrl": "https://www.videasy.net/logo.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "English",
+  "streamType": "HLS",
+  "encrypted": false,
+  "quality": "4K - 1080p - 720p",
+  "baseUrl": "https://player.videasy.net/",
+  "searchBaseUrl": "https://player.videasy.net/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/videasy/videasy.js",
+  "type": "shows/movies",
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": true
 }

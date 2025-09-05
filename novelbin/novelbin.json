@@ -1,20 +1,20 @@
 {
-    "sourceName": "NovelBin",
-    "iconUrl": "https://novelbin.com/img/logo.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "English",
-    "streamType": "novels",
-    "quality": "N/A",
-    "encrypted":true,
-    "baseUrl": "https://novelbin.com/",
-    "searchBaseUrl": "https://novelbin.com/search/?wd=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/novelbin/novelbin.sora",
-    "type": "novels",
-    "asyncJS": true,
-    "novel": true,
-    "downloadSupport": false
+  "sourceName": "NovelBin",
+  "iconUrl": "https://novelbin.com/img/logo.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "English",
+  "streamType": "novels",
+  "quality": "N/A",
+  "encrypted": false,
+  "baseUrl": "https://novelbin.com/",
+  "searchBaseUrl": "https://novelbin.com/search/?wd=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/novelbin/novelbin.js",
+  "type": "novels",
+  "asyncJS": true,
+  "novel": true,
+  "downloadSupport": false
 }

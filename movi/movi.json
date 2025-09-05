@@ -1,20 +1,20 @@
 {
-    "sourceName": "Movi",
-    "iconUrl": "https://www.movi.pk/wp-content/uploads/2024/12/favicon.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Hindi (DUB/SUB)",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "baseUrl": "https://www.movi.pk/",
-    "searchBaseUrl": "https://www.movi.pk/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/movi/movi.sora",
-    "type": "movies",
-    "encrypted":true,
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": false
+  "sourceName": "Movi",
+  "iconUrl": "https://www.movi.pk/wp-content/uploads/2024/12/favicon.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Hindi (DUB/SUB)",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "baseUrl": "https://www.movi.pk/",
+  "searchBaseUrl": "https://www.movi.pk/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/movi/movi.js",
+  "type": "movies",
+  "encrypted": false,
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": false
 }

@@ -1,20 +1,20 @@
 {
-    "sourceName": "Anime4Up",
-    "iconUrl": "https://ww.anime4up.rest/wp-content/uploads/2019/03/Anime4up-Icon-1.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.0",
-    "language": "Arabic",
-    "streamType": "HLS",
-    "encrypted":true,
-    "quality": "1080p",
-    "baseUrl": "https://uqload.cx/",
-    "searchBaseUrl": "https://uqload.cx/",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/anime4up/anime4up.sora",
-    "type": "anime",
-    "asyncJS": true,
-    "softsub": false,
-    "downloadSupport": true
+  "sourceName": "Anime4Up",
+  "iconUrl": "https://ww.anime4up.rest/wp-content/uploads/2019/03/Anime4up-Icon-1.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.0",
+  "language": "Arabic",
+  "streamType": "HLS",
+  "encrypted": false,
+  "quality": "1080p",
+  "baseUrl": "https://uqload.cx/",
+  "searchBaseUrl": "https://uqload.cx/",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/anime4up/anime4up.js",
+  "type": "anime",
+  "asyncJS": true,
+  "softsub": false,
+  "downloadSupport": true
 }

@@ -1,18 +1,18 @@
 {
-    "sourceName": "AniLibria",
-    "iconUrl": "https://github.com/50n50/sources/blob/main/anilibria/icon.png?raw=true",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.1",
-    "language": "Russian",
-    "streamType": "HLS",
-    "quality": "720p",
-    "baseUrl": "https://api.anilibria.tv/",
-    "searchBaseUrl": "https://api.anilibria.tv/v3/title/search?search=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/anilibria/anilibria.sora",
-    "asyncJS": true,
-    "encrypted":true,
-    "type": "anime"
+  "sourceName": "AniLibria",
+  "iconUrl": "https://github.com/50n50/sources/blob/main/anilibria/icon.png?raw=true",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.1",
+  "language": "Russian",
+  "streamType": "HLS",
+  "quality": "720p",
+  "baseUrl": "https://api.anilibria.tv/",
+  "searchBaseUrl": "https://api.anilibria.tv/v3/title/search?search=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/anilibria/anilibria.js",
+  "asyncJS": true,
+  "encrypted": false,
+  "type": "anime"
 }

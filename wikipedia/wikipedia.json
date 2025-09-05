@@ -1,17 +1,17 @@
 {
-    "sourceName": "Public Domain in the US",
-    "iconUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/wikipedia/wikipedia-logo.png",
-    "author": {
-        "name": "Sulfur",
-        "icon": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/asset.png"
-    },
-    "version": "1.0.1",
-    "language": "English",
-    "streamType": "HLS",
-    "quality": "720p",
-    "baseUrl": "https://en.wikipedia.org/wiki/List_of_films_in_the_public_domain_in_the_United_States",
-    "searchBaseUrl": "https://en.wikipedia.org/wiki/List_of_films_in_the_public_domain_in_the_United_States",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/wikipedia/wikipedia.sora",
-    "asyncJS": true,
-    "streamAsyncJS": false
+  "sourceName": "Public Domain in the US",
+  "iconUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/wikipedia/wikipedia-logo.png",
+  "author": {
+    "name": "Sulfur",
+    "icon": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/asset.png"
+  },
+  "version": "1.0.1",
+  "language": "English",
+  "streamType": "HLS",
+  "quality": "720p",
+  "baseUrl": "https://en.wikipedia.org/wiki/List_of_films_in_the_public_domain_in_the_United_States",
+  "searchBaseUrl": "https://en.wikipedia.org/wiki/List_of_films_in_the_public_domain_in_the_United_States",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/wikipedia/wikipedia.js",
+  "asyncJS": true,
+  "streamAsyncJS": false
 }

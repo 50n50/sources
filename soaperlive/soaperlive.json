@@ -1,18 +1,18 @@
 {
-    "sourceName": "Soaper Live",
-    "iconUrl": "https://files.catbox.moe/gwqviy.png",
-    "author": {
-        "name": "50/50",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
-    },
-    "version": "1.0.5",
-    "language": "English",
-    "streamType": "HLS",
-    "quality": "1080p",
-    "encrypted":true,
-    "baseUrl": "https://soaper.live/",
-    "searchBaseUrl": "https://soaper.live/%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/soaperlive/soaperlive.sora",
-    "asyncJS": true,
-    "type": "movies"
+  "sourceName": "Soaper Live",
+  "iconUrl": "https://files.catbox.moe/gwqviy.png",
+  "author": {
+    "name": "50/50",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3122kQwublLkZ6rf1fEpUP79BxZOFmH9BSA&s"
+  },
+  "version": "1.0.5",
+  "language": "English",
+  "streamType": "HLS",
+  "quality": "1080p",
+  "encrypted": false,
+  "baseUrl": "https://soaper.live/",
+  "searchBaseUrl": "https://soaper.live/%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/soaperlive/soaperlive.js",
+  "asyncJS": true,
+  "type": "movies"
 }

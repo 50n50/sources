@@ -1,18 +1,18 @@
 {
-    "sourceName": "AnimeWorld",
-    "iconUrl": "https://raw.githubusercontent.com/cranci1/Ryu/d48d716ec6c5ef9ae7b3711c117f920b0c7eb1ce/Ryu/Assets.xcassets/Sources/AnimeWorld.imageset/animeworld.png",
-    "author": {
-        "name": "sobet",
-        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQPQ1qIiALbM3xDWGsuJzu6ItaQGwb9ICRRw&s"
-    },
-    "version": "1.0.5",
-    "language": "Italian",
-    "streamType": "MP4",
-    "quality": "1080p",
-    "baseUrl": "https://animeworld.ac/",
-    "searchBaseUrl": "https://www.animeworld.ac/search?keyword=%s",
-    "scriptUrl": "https://raw.githubusercontent.com/50n50/sources/refs/heads/main/animeworld/animeworld.sora",
-    "type": "anime",
-    "encrypted":true,
-    "asyncJS": true
+  "sourceName": "AnimeWorld",
+  "iconUrl": "https://raw.githubusercontent.com/cranci1/Ryu/d48d716ec6c5ef9ae7b3711c117f920b0c7eb1ce/Ryu/Assets.xcassets/Sources/AnimeWorld.imageset/animeworld.png",
+  "author": {
+    "name": "sobet",
+    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQPQ1qIiALbM3xDWGsuJzu6ItaQGwb9ICRRw&s"
+  },
+  "version": "1.0.5",
+  "language": "Italian",
+  "streamType": "MP4",
+  "quality": "1080p",
+  "baseUrl": "https://animeworld.ac/",
+  "searchBaseUrl": "https://www.animeworld.ac/search?keyword=%s",
+  "scriptUrl": "https://raw.githubusercontent.com/tamocruz/sources/refs/heads/main/animeworld/animeworld.js",
+  "type": "anime",
+  "encrypted": false,
+  "asyncJS": true
 }
