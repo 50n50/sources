@@ -1,0 +1,27 @@
+name: Decrypt Sora Files
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  decrypt:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - name: Run decryption script
+      run: node decrypt.js
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Decrypt .sora files and update JSONs" || echo "No changes to commit"
+        git push
