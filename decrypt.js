@@ -32,7 +32,7 @@ dirs.forEach(dir => {
     if (fs.existsSync(jsonFile)) {
       const jsonContent = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
       if (jsonContent.scriptUrl) {
-        jsonContent.scriptUrl = jsonContent.scriptUrl.replace('.sora', '.js').replace('50n50/sources', 'tamocruz/sources');
+        jsonContent.scriptUrl = jsonContent.scriptUrl.replace('.sora', '.js').replace('50n50/sources', 'tamocruz/ssources');
       }
       if (jsonContent.encrypted !== undefined) {
         jsonContent.encrypted = false;
