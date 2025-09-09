@@ -15,5 +15,6 @@
     "type": "anime",
     "asyncJS": true,
     "softsub": false,
-    "downloadSupport": true
+    "downloadSupport": true,
+    "note": "Use external player."
 }
