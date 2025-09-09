@@ -79,7 +79,7 @@ async function extractStreamUrl(url) {
         const response = await fetchv2(url);
         const html = await response.text();
 
-        const match = html.match(/<iframe[^>]+src="(https:\/\/player\.zilla-networks\.com\/play\/[^"]+)"/);
+        const match = html.match(/url:"(https:\/\/player\.zilla-networks\.com\/play\/[^"]+)"/i);
         if (match) {
             return match[1].replace("/play/", "/m3u8/");
         }
@@ -89,5 +89,6 @@ async function extractStreamUrl(url) {
         return "https://files.catbox.moe/avolvc.mp4";
     }
 }
+
 
 
