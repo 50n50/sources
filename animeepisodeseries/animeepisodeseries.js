@@ -9,7 +9,7 @@ async function searchResults(keyword) {
         let match;
         while ((match = regex.exec(html)) !== null) {
             results.push({
-                title: match[3].trim(),
+                title: cleanTitle(match[3].trim()),
                 image: match[2].trim(),
                 href: match[1].trim()
             });
@@ -34,7 +34,7 @@ async function extractDetails(url) {
         const description = match ? match[1].trim() : "N/A";
 
         return JSON.stringify([{
-            description: description,
+            description: cleanTitle(description),
             aliases: "N/A",
             airdate: "N/A"
         }]);
@@ -118,7 +118,7 @@ async function extractStreamUrl(url) {
 
         const match = html.match(/<iframe[^>]+src="(https:\/\/www\.4shared\.com\/web\/embed\/file\/[^"]+)"/i);
         const video = match ? match[1].trim() : null;
-        console.log("Extracted iframe URL:"+ video);
+
         const response2 = await fetchv2(video);
         const html2 = await response2.text();
         
@@ -128,5 +128,12 @@ async function extractStreamUrl(url) {
     } catch (err) {
         return "https://files.catbox.moe/avolvc.mp4";
     }
+}
+
+function cleanTitle(title) {
+    return title
+        .replace(/&#8217;/g, "'")  
+        .replace(/&#8211;/g, "-")  
+        .replace(/&#[0-9]+;/g, ""); 
 }
 
