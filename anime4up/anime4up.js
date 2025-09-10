@@ -51,33 +51,92 @@ async function extractDetails(url) {
 
 async function extractEpisodes(url) {
     const results = [];
+    
     try {
         const response = await fetchv2(url);
         const html = await response.text();
-
-        const regex = /<div class="col-lg-3[^"]*DivEpisodeContainer">([\s\S]*?)<\/div>\s*<\/div>/gi;
+        
+        const episodeRegex = /<div class="col-lg-3[^"]*DivEpisodeContainer">([\s\S]*?)<\/div>\s*<\/div>/gi;
         let match;
         let epNumber = 1;
-
-        while ((match = regex.exec(html)) !== null) {
+        
+        while ((match = episodeRegex.exec(html)) !== null) {
             const hrefMatch = /<h3><a href="([^"]+)"/i.exec(match[1]);
             const href = hrefMatch ? hrefMatch[1].trim() : "";
-
             results.push({
                 href: href,
                 number: epNumber
             });
-
             epNumber++;
         }
-
+        
+        const paginationRegex = /<li\s*><a\s+class="page-numbers"\s+href="[^"]*\/page\/(\d+)\/">(\d+)<\/a><\/li>/gi;
+        let maxPage = 1;
+        let paginationMatch;
+        
+        while ((paginationMatch = paginationRegex.exec(html)) !== null) {
+            const pageNum = parseInt(paginationMatch[2]);
+            if (pageNum > maxPage) {
+                maxPage = pageNum;
+            }
+        }
+        
+        if (maxPage > 1) {
+            const pagePromises = [];
+            
+            for (let page = 2; page <= maxPage; page++) {
+                const pageUrl = `${url}/page/${page}/`;
+                pagePromises.push(fetchPageEpisodes(pageUrl, epNumber + (page - 2) * getEpisodesPerPage(results.length)));
+            }
+            
+            const pageResults = await Promise.all(pagePromises);
+            
+            pageResults.forEach(pageEpisodes => {
+                results.push(...pageEpisodes);
+            });
+            
+            results.forEach((episode, index) => {
+                episode.number = index + 1;
+            });
+        }
+        
         return JSON.stringify(results);
+        
     } catch (err) {
         return JSON.stringify([{
             href: "Error",
             number: "Error"
         }]);
     }
+}
+
+async function fetchPageEpisodes(pageUrl, startingEpNumber) {
+    try {
+        const response = await fetchv2(pageUrl);
+        const html = await response.text();
+        const episodeRegex = /<div class="col-lg-3[^"]*DivEpisodeContainer">([\s\S]*?)<\/div>\s*<\/div>/gi;
+        const pageResults = [];
+        let match;
+        let epNumber = startingEpNumber;
+        
+        while ((match = episodeRegex.exec(html)) !== null) {
+            const hrefMatch = /<h3><a href="([^"]+)"/i.exec(match[1]);
+            const href = hrefMatch ? hrefMatch[1].trim() : "";
+            pageResults.push({
+                href: href,
+                number: epNumber
+            });
+            epNumber++;
+        }
+        
+        return pageResults;
+    } catch (err) {
+        return [];
+    }
+}
+
+function getEpisodesPerPage(firstPageCount) {
+    return firstPageCount || 12; 
 }
 
 async function extractStreamUrl(url) {
