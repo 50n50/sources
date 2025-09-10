@@ -180,18 +180,25 @@ async function extractStreamUrl(url) {
     ]);
     
     console.log(decryptedDub);
-    const networkResult = await networkFetch(decryptedDub + "?autostart=true", 10, {
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-      "Accept-Encoding": "gzip",
-      "Connection": "Keep-Alive",
-      "Host": "megaup.site",
-      "Referer": "https://animekai.to/",
-      "sec-ch-ua": "\"Android WebView\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
-      "sec-ch-ua-mobile": "?0",
-      "sec-ch-ua-platform": "\"Android\"",
-      "Upgrade-Insecure-Requests": "1",
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
-    }, ".m3u8");
+    const networkResult = await networkFetch(decryptedDub, {
+      timeoutSeconds: 10,
+      headers: {
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Accept-Encoding": "gzip",
+          "Connection": "Keep-Alive",
+          "Host": "megaup.site",
+          "Referer": "https://animekai.to/",
+          "sec-ch-ua": "\"Android WebView\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Android\"",
+          "Upgrade-Insecure-Requests": "1",
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+      },
+      cutoff: ".m3u8",
+      waitForSelectors: [".jw-icon.jw-icon-display"],
+      clickSelectors: [".jw-icon.jw-icon-display"],
+      maxWaitTime: 10
+    });
 
     console.log(JSON.stringify(networkResult));
 
