@@ -76,38 +76,61 @@ async function extractEpisodes(url) {
         }]);
     }
 }
-
 async function extractStreamUrl(url) {
   try {
     const response = await fetchv2(url);
     const html = await response.text();
+    console.log("Fetched HTML:", html);
 
-    const playerRegex = /<option[^>]*value="([^"]+)"[^>]*data-index="2"[^>]*>/;
-    const playerMatch = playerRegex.exec(html);
-    if (!playerMatch) throw new Error("Player not found");
+    const player2Regex = /<option[^>]*value="([^"]+)"[^>]*data-index="2"[^>]*>/;
+    const player2Match = player2Regex.exec(html);
 
-    const decodedHtml = atob(playerMatch[1]);
+    if (player2Match) {
+      const decodedHtml = atob(player2Match[1]);
+      const iframeSrcMatch = /<iframe[^>]*src="([^"]*filemoon[^"]*)"/.exec(decodedHtml);
 
-    const iframeSrcMatch = /<iframe[^>]*src="([^"]*filemoon[^"]*)"/.exec(decodedHtml);
-    if (!iframeSrcMatch) throw new Error("Filemoon iframe not found");
+      if (!iframeSrcMatch) throw new Error("Filemoon iframe not found for Player 2");
 
-    const filemoonUrl = iframeSrcMatch[1];
+      const filemoonUrl = iframeSrcMatch[1];
+      const providers = { [filemoonUrl]: "filemoon" };
+      const streams = await multiExtractor(providers);
 
-    const providers = { [filemoonUrl]: "filemoon" };
-    const streams = await multiExtractor(providers);
+      const hlsLink = streams[1];
+      console.log("Player 2 HLS:", hlsLink);
 
-    const hlsLink = streams[1];
+      return hlsLink;
+    }
 
-    console.log(hlsLink);
+    const player1Regex = /<option[^>]*value="([^"]+)"[^>]*data-index="1"[^>]*>/;
+    const player1Match = player1Regex.exec(html);
 
-    return hlsLink;
+    if (player1Match) {
+      const decodedHtml = atob(player1Match[1]);
+      const iframeSrcMatch = /<iframe[^>]*src="([^"]+)"/.exec(decodedHtml);
 
+      if (!iframeSrcMatch) throw new Error("Iframe not found for Player 1");
 
+      const player1Url = iframeSrcMatch[1];
+
+      if (!player1Url.includes("filemoon")) {
+        throw new Error("Player 1 is not filemoon");
+      }
+
+      const providers = { [player1Url]: "filemoon" };
+      const streams = await multiExtractor(providers);
+
+      const hlsLink = streams[1];
+
+      return hlsLink;
+    }
+
+    throw new Error("Neither Player 2 nor Player 1 found");
   } catch (err) {
     console.error("Error in extractStreamUrl:", err);
-    return "https://files.catbox.moe/avolvc.mp4";
+    return "https://files.catbox.moe/avolvc.mp4"; 
   }
 }
+
 
 function cleanHtmlSymbols(string) {
   if (!string) return "";
