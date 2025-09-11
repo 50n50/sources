@@ -202,6 +202,11 @@ async function extractStreamUrl(url) {
 
     console.log(JSON.stringify(networkResult));
 
+    if (!networkResult.requests || networkResult.requests.length === 1) {
+      console.log("No network requests found, DUB not available");
+      return "https://files.catbox.moe/m1jmdm.mp4"; 
+    }
+
     if (networkResult.requests && networkResult.requests.length > 0) {
     const streamUrl = networkResult.requests.find(url => url.endsWith('.m3u8')) || null;
         return streamUrl;
