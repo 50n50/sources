@@ -135,7 +135,9 @@ async function extractStreamUrl(url) {
         const name = chosenServer.name.toLowerCase();
 
         if (name.includes("streamwish")) {
-            const response = await fetchv2(streamUrl.replace("https://zuvioeb.com/e/", "https://hgplaycdn.com/e/"));
+            const newUrl = "https://hgplaycdn.com/e/" + streamUrl.replace(/^https?:\/\/[^/]+\/e\//, '');
+            const response = await fetchv2(newUrl);
+
             const html = await response.text();
 
             const result = await b(html);
