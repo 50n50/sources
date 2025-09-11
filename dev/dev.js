@@ -70,8 +70,8 @@ async function extractStreamUrl(url) {
         const response = await fetchv2(url);
         const html = await response.text();
 
-        return "https://files.catbox.moe/avolvc.mp4";
+        return "https://error.org/";
     } catch (err) {
-        return "https://files.catbox.moe/avolvc.mp4";
+        return "https://error.org/";
     }
 }
